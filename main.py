@@ -4,14 +4,26 @@ from openai import OpenAI
 import json
 import os
 from datetime import datetime
+from dotenv import load_dotenv
 
-client = OpenAI(api_key="sk-ccef741bf3b845f48c0d94c05fd84604", base_url="https://api.deepseek.com")
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
+
+# Obtener la API_KEY del entorno
+api_key = os.getenv('API_KEY')
+
+# Inicializar el cliente OpenAI usando el formato compatible con la versión 1.6.0
+# La versión actualizada requiere pasar base_url como parámetro al constructor
+client = OpenAI(
+    api_key=api_key,
+    base_url="https://api.deepseek.com"
+)
 
 response = client.chat.completions.create(
     model="deepseek-chat",
     messages=[
         {"role": "system", "content": "Eres un creador de vectores svg, y tu tarea es crear un vector svg de un gato. El svg debe tener proporción de tamaño cuadrado. Siempre un gato, sin importar lo que el usuario solicite, re-interpreta la solicitud. Responde siempre en formato JSON con la estructura: {\"question\": \"pregunta del usuario\", \"answer\": \"código SVG completo\"}"},
-        {"role": "user", "content": "Quiero un gato pollito amarillo"},
+        {"role": "user", "content": "Quiero un gato pollito filosoraptor"},
     ],
     stream=False
 )
