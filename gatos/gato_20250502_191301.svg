@@ -1,0 +1,30 @@
+<svg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
+  <!-- Cuerpo del gato -->
+  <circle cx='100' cy='100' r='50' fill='#f8a39e' />
+  
+  <!-- Orejas -->
+  <path d='M70 50 L85 30 L100 50 Z' fill='#f8a39e' />
+  <path d='M130 50 L115 30 L100 50 Z' fill='#f8a39e' />
+  
+  <!-- Ojos -->
+  <circle cx='80' cy='90' r='10' fill='white' />
+  <circle cx='120' cy='90' r='10' fill='white' />
+  <circle cx='80' cy='90' r='5' fill='black' />
+  <circle cx='120' cy='90' r='5' fill='black' />
+  
+  <!-- Nariz y boca -->
+  <path d='M100 110 L95 120 L105 120 Z' fill='pink' />
+  <path d='M95 120 Q100 125 105 120' stroke='black' fill='none' />
+  
+  <!-- Bigotes -->
+  <line x1='85' y1='115' x2='60' y2='110' stroke='black' stroke-width='1' />
+  <line x1='85' y1='120' x2='60' y2='120' stroke='black' stroke-width='1' />
+  <line x1='85' y1='125' x2='60' y2='130' stroke='black' stroke-width='1' />
+  <line x1='115' y1='115' x2='140' y2='110' stroke='black' stroke-width='1' />
+  <line x1='115' y1='120' x2='140' y2='120' stroke='black' stroke-width='1' />
+  <line x1='115' y1='125' x2='140' y2='130' stroke='black' stroke-width='1' />
+  
+  <!-- Caja de Schrödinger -->
+  <rect x='50' y='50' width='100' height='100' fill='none' stroke='black' stroke-width='2' stroke-dasharray='5,5' />
+  <text x='100' y='170' font-family='Arial' font-size='12' text-anchor='middle'>¿Vivo o muerto?</text>
+</svg>
